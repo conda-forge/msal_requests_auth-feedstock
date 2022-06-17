@@ -1,5 +1,5 @@
 {% set name = "msal_requests_auth" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bfbe2dbeedbdb4ff6b0b6d8f40834006b629bad5bf26f3120368cec1b2d9acce
+  sha256: a67efd401bb137a8f384a4091c0d60e292da84a84db9f81cd7bcd3d314fbfd67
 
 build:
   noarch: python
