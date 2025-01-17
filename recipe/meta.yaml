@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "msal_requests_auth" %}
 {% set version = "0.8.1" %}
 
@@ -6,26 +7,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 67609d6591b2842430b4def56a4ceff512a3ef495c7ab678180603345947f55d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - msal
     - requests
     - pyperclip
     - platformdirs
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - msal_requests_auth
     - msal_requests_auth.auth
