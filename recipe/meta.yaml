@@ -1,14 +1,14 @@
 {% set python_min = "3.10" %}
 {% set name = "msal_requests_auth" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0b611309117de6846febfa16df42f39a31b474251fc162fdc3fc77c665c0d1b2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 73e9c1504d6f4b24dbb227d5aaa0d9990060b41927fd2d33b00c1cd5b07eca8a
 
 build:
   noarch: python
