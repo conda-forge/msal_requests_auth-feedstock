@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  python_min: '3.10'
+  version: 0.9.4
+
+package:
+  name: msal_requests_auth
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/m/msal_requests_auth/msal_requests_auth-${{ version }}.tar.gz
+  sha256: 73e9c1504d6f4b24dbb227d5aaa0d9990060b41927fd2d33b00c1cd5b07eca8a
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - msal
+    - requests
+    - pyperclip
+    - platformdirs
+
+tests:
+  - python:
+      imports:
+      - msal_requests_auth
+      - msal_requests_auth.auth
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - '*'
+
+about:
+  homepage: http://github.com/vylor/msal-requests-auth
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Authentication using python requests and MSAL.
+
+
+extra:
+  recipe-maintainers:
+    - snowman2
