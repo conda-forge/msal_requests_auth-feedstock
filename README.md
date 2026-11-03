@@ -3,19 +3,11 @@ About msal_requests_auth-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msal_requests_auth-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/corteva/msal-requests-auth
+Home: http://github.com/vylor/msal-requests-auth
 
 Package license: BSD-3-Clause
 
 Summary: Authentication using python requests and MSAL.
-
-Development: https://github.com/corteva/msal-requests-auth
-
-Documentation: https://github.com/corteva/msal-requests-auth
-
-Authentication using python requests and MSAL.
-This uses the MSAL cache for repeated requests.
-
 
 Current build status
 ====================
